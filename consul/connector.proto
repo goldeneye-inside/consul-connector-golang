@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package consul;
+
+service ConsulConnector {
+  rpc RegisterService(ReqRegisterService) returns (Empty);
+  rpc GetServiceAddress(ReqGetServiceAddress) returns (RespGetServiceAddress);
+}
+
+message Empty {
+}
+
+message ReqRegisterService {
+  string consul_token = 1;
+  string service_name = 2;
+  string service_id = 3;
+  string service_ip = 4;
+  uint32 service_port = 5;
+  string health_check_url = 6;
+}
+
+message ReqGetServiceAddress {
+  string consul_token = 1;
+  string service_name = 2;
+}
+
+message RespGetServiceAddress {
+  string address = 1;
+}
