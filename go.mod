@@ -1,4 +1,4 @@
-module gitlab.com/goldeneye-inside/consul/library/golang
+module github.com/goldeneye-inside/consul-connector-golang
 
 go 1.13
 

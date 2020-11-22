@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 
-	"gitlab.com/goldeneye-inside/consul/library/golang/config"
+	"github.com/goldeneye-inside/consul-connector-golang/config"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
